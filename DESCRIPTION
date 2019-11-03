@@ -1,0 +1,19 @@
+Package: tddwithr
+Title: Test Driven Development with R
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Team",
+           family = "TARDIS",
+           role = c("aut", "cre"),
+           email = "dev-team-tardis@rewe-digital.com")
+Description: A simple workshop.
+Depends:
+    R (>= 3.6)
+Imports:
+    testthat,
+    devtools,
+    plyr
+License: Proprietary Software
+Encoding: UTF-8
+Language: en-US
+LazyData: true
