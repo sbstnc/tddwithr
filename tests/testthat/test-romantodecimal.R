@@ -1,13 +1,8 @@
 context("RomanToDecimal")
 
-testthat::test_that("M equals 1000", {
-  expect_equal(rom2dec("M"), 1000)
-})
+test_cases <- data.frame(given    = c("M", "D", "C", "L", "X", "V", "I", "mmvi", "McMxLIv"),
+                         expected = c(1000, 500, 100, 50, 10, 5, 1, 2006, 1944), stringsAsFactors = FALSE)
 
-testthat::test_that("D equals 500", {
-  expect_equal(rom2dec("D"), 500)
-})
-
-testthat::test_that("C equals 100", {
-  expect_equal(rom2dec("C"), 100)
+test_that("conversion is as expected", {
+  expect_equal(rom2dec(test_cases$given), test_cases$expected)
 })
